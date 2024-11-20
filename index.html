@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--======== Css =========== -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="stylesheet" href="overall-styles.css" />
+
+    <!--======= Google Fonts =========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!--======= Bootstrap icons =======-->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <title>
+
+        ASARVA Life Science
+    </title>
+    <style>
+        
+    #prods {
+      margin-top: 20px;
+      color: var(--first-color);
+      font-weight: var(--font-bold);
+      font-size: var(--h2-font-size);
+      font-family: "DM Sans";
+      padding: 20px;
+      padding-left: 6%;
+      background-color: var(--background-primary);
+    }
+
+    .pdf-products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .product {
+      flex: 1 1 30%;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .product img {
+      /* max-width: 100%; */
+      width: 80vw;
+      height: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #footer-logo{
+      width:100px;
+      height:auto;
+      margin:10px 0px 0px 50px;
+    }
+    </style>
+</head>
+
+<body onscroll="onScroll()">
+    <header>
+        <nav class="scroll" id="nav">
+            <div class="logo">
+                <a class="logo-link" href="#">
+                    <img class="new-logo" src="./pages/images/logo/logo.png" alt="logo">
+                    <h2 class="name-logo">ASARVA Life Science</h2>
+                </a>
+                <div class="menu-mobile" id="menu-mobile">
+                    <button class="open">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_61_152)">
+                                <path d="M10 20H30" stroke="var(--first-color)" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10 12H30" stroke="var(--first-color)" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18 28L30 28" stroke="var(--first-color)" stroke-width="4"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_61_152" x="-4" y="0" width="48" height="48"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="4" />
+                                    <feGaussianBlur stdDeviation="2" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_61_152" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_61_152"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </button>
+                    <button class="close">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu">
+                <ul class="ul-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./pages/products/index.html" id="" role="button">Products</a></li>
+                    <li><a href="./pages/aboutus/index.html">About Us</a></li>
+                    <li><a href="./pages/branches/index.html">Our Stockist</a></li>
+                    <li class="nav-agende"><a href="./pages/contact/index.html">Contact</a></li>
+                </ul>
+                <div class="nav-social">
+                    <a href="#"><i class="bi bi-facebook nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-instagram nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-youtube nav-icon"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="main">
+        <!------- HOME -------------->
+        <section class="home grid" id="home">
+            <div class="home-container">
+                <div class="home-content">
+                    <iframe id="slide" src="pages/home/home-slider.html" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <!------- INTRO ------------>
+        <section class="intro">
+            <div class="welcome-text">
+                <h2>WHO WE ARE</h2>
+                <br />
+                <span class="about-description topRevealLarge">At Asarva Life Sciences, we are committed to transforming
+                    healthcare through innovation, quality, and ethical responsibility. As a leading pharmaceutical
+                    company, our
+                    primary focus is to enhance the lives of patients by providing top-notch medications in the fields
+                    of
+                    Rheumatology, Orthopaedics and ENT. With a deep understanding of healthcare needs, we
+                    are
+                    dedicated to addressing health challenges with cutting-edge solutions, ensuring that every product
+                    we offer
+                    meets the highest standards of safety and efficacy.
+
+                </span>
+                <br /><br />
+                <span class="about-description topRevealLarge">Join us on our journey towards a healthier and brighter
+                    future for all.</span>
+                <br /><br />
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="welcome-text">
+                <h2>Our Operational Area</h2>
+                <br />
+                <span class="about-description topRevealLarge">At Asarva Life Sciences, we are committed to providing
+                    high-quality healthcare solutions across diverse medical specialties. Our operations are focused on
+                    ensuring the availability of our innovative products in key therapeutic areas to improve patient
+                    outcomes and quality of life.
+                </span>
+                <br /><br />
+                <span class="about-description topRevealLarge">Our operational presence is primarily focused in Delhi
+                    NCR, where we are proud to work with a skilled team of 10 sales representatives and a network of 15
+                    trusted distributors. This ensures that our products are readily available in clinics, hospitals,
+                    and pharmacies across the region, with timely deliveries and reliable service.</span>
+                <br /><br />
+                <span class="about-description topRevealLarge">At Asarva Life Sciences, we are constantly expanding our
+                    operational reach to ensure that our innovative healthcare solutions are accessible to more patients
+                    and healthcare professionals.</span>
+                </br></br>
+            </div>
+        </section>
+
+
+
+        <section class="prod">
+            <h1 id="prods">
+              PRODUCTS OFFERED
+            </h1>
+            <div id="pdf-products">
+              <!-- <iframe src="../images/pds.pdf" frameborder="0"></iframe> -->
+              <!-- <div class="product">
+                  <img src="../images/prod/ASARVA FOLDER-1_page-0001.jpg" alt="product" class="product"></img>
+               </div>
+                 <div class="product">
+                  <img src="../images/prod/ASARVA FOLDER-1_page-0002.jpg" alt="product" class="product"></img>
+               </div> -->
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0003.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0004.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0005.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0006.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0007.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0008.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0009.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0010.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0011.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0012.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0013.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0014.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0015.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0016.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0017.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0018.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0019.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0020.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0021.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0022.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0023.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0024.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0025.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0026.jpg" alt="product" class="product"></img>
+              </div>
+              <div class="product">
+                <img src="pages/images/prod/ASARVA FOLDER-1_page-0027.jpg" alt="product" class="product"></img>
+              </div>
+            </div>
+          </section>
+
+
+        <!------- CONTACT ------------>
+        <section class="contact grid" id="contact">
+            <div class="contact-container">
+                <div class="contact-content-data">
+                    <h2 class="title-contact bottomRevealSmall">Contact Us!</h2>
+                    <div class="span-contact bottomRevealMedium contacto">
+                        <span><i class="bi bi-geo-alt"></i> &nbsp; &nbsp; &nbsp;A 324,II Floor Amritpuri B ,East of Kailash,New Delhi -110065</span>
+                        <br />
+                        <span><i class="bi bi-envelope "></i> &nbsp; &nbsp; &nbsp;asarva.ankur@gmail.com<br/> 9599746650</span>
+                        <br />
+                        <span><i class="bi bi-envelope "></i> &nbsp; &nbsp; &nbsp; asarva.kamal@gmail.com <br/> 9910054167</span>
+                      </div>
+                    <button class="home-button bottomRevealLarge"
+                        onclick="window.location.href='//api.whatsapp.com/send?phone=+919910054167&text=';">
+                        <i class="bi bi-whatsapp"></i> Schedule your appointment
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!------- FOOTER ------------>
+    <footer>
+        <section class="footer grid">
+            <div class="footer-content">
+                <div class="footer-data">
+                    
+                    <div id="nav-logo-link" href="#">
+                      <img class="new-logo" id="footer-logo" src="./pages/images/logo/logo.png" alt="logo">
+                      <!-- <h2 class="name-logo">ASARVA Life Science</h2> -->
+                    </div>
+                    <h2>Asarva <strong>Life Sciences</strong></h2>
+                    <p>Copyright ©2024 All Rights Reserved.<br> Design & Developed by <a href=""
+                            id="trishna">Trishna</a></p>
+                </div>
+
+                <!-- <div class="footer-social">
+                    <a href="#"><i class="bi bi-facebook nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-instagram nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-youtube nav-icon"></i></a>
+                </div> -->
+            </div>
+        </section>
+    </footer>
+
+
+    <!------- SCROLL TOP ------------>
+    <a id="scrollup" class="back-top" href="#home">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="grey" />
+            <path d="M20 27V13" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M13 20L20 13L27 20" stroke="white" stroke-width="4" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+
+    </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="pages/home/js/main.js"></script>
+</body>
+
+</html>

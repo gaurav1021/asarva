@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--======== Css =========== -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="stylesheet" href="../overall-styles.css" />
+
+    <!--======= Google Fonts =========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!--======= Bootstrap icons =======-->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <title>
+
+        ASARVA Life Science
+    </title>
+    <style>
+        #contact-us {
+            color: var(--first-color);
+            font-weight: var(--font-bold);
+            font-size: var(--h2-font-size);
+        }
+
+        .contact {
+            padding-top: 170px !important;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        section {
+            padding-top: 100px;
+        }
+
+        section:has(form) {
+            width: 100%;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: inherit;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: var(--first-color);
+            outline: none;
+            background-color: #fff;
+        }
+
+        form button {
+            width: 100%;
+            background-color: var(--first-color);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #4547d9;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 500px) {
+            form {
+                padding: 15px;
+            }
+
+            form input,
+            form textarea,
+            form button {
+                font-size: 14px;
+            }
+        }
+
+        main {
+            width: 80%;
+            margin: auto;
+        }
+
+        @media(min-width:1200px) {
+            main {
+                display: flex;
+                justify-content: space-evenly;
+                /* flex-wrap: wrap; */
+            }
+        }
+
+        .contact-img {
+            width: 280px !important;
+            /* height */
+        }
+
+        * {
+            font-weight: var(--font-bold);
+            line-height: 31.25px;
+            font-family: 'DM Sans';
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #prods {
+            margin-top: 20px;
+            color: var(--first-color);
+            font-weight: var(--font-bold);
+            font-size: var(--h2-font-size);
+            font-family: "DM Sans";
+            padding: 20px;
+            padding-left: 6%;
+            background-color: var(--background-primary);
+        }
+
+        .pdf-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            flex: 1 1 30%;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            /* max-width: 100%; */
+            width: 80vw;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .aboveTable {
+            height: var(--nav-height);
+        }
+
+        .belowTable {
+            height: 50px;
+        }
+
+
+        .table {
+            /* margin:1rem; */
+            width: 90%;
+            margin: auto;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid var(--background-primary);
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+
+        h1, h2 {
+            padding-top: 20px;
+            font-family: "DM Sans";
+
+        }
+
+        main {
+            display: block !important;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    #footer-logo{
+      width:100px;
+      height:auto;
+      margin:10px 0px 0px 50px;
+    }
+    </style>
+</head>
+
+<body onscroll="onScroll()">
+    <header>
+        <nav class="scroll" id="nav">
+            <div class="logo">
+                <a class="logo-link" href="#">
+                    <img class="new-logo" src="../images/logo/logo.png" alt="logo">
+                    <h2 class="name-logo">ASARVA Life Science</h2>
+                </a>
+                <div class="menu-mobile" id="menu-mobile">
+                    <button class="open">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_61_152)">
+                                <path d="M10 20H30" stroke="var(--first-color)" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10 12H30" stroke="var(--first-color)" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18 28L30 28" stroke="var(--first-color)" stroke-width="4"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_61_152" x="-4" y="0" width="48" height="48"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="4" />
+                                    <feGaussianBlur stdDeviation="2" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_61_152" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_61_152"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </button>
+                    <button class="close">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu">
+                <ul class="ul-links">
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="../products/index.html" id="" role="button">Products</a></li>
+                    <li><a href="../aboutus/index.html">About Us</a></li>
+                    <li><a href="../branches/index.html">Our Stockist</a></li>
+                    <li class="nav-agende"><a href="../contact/index.html">Contact</a></li>
+                </ul>
+                <div class="nav-social">
+                    <a href="#"><i class="bi bi-facebook nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-instagram nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-youtube nav-icon"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="main">
+
+
+        <!-- <section class="aboveTable">
+
+        </section> -->
+        <section class="table">
+            <!-- Table 1 -->
+            <h1><b>Our Stockist</b></h1>
+            <h2>North Delhi</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Shivaey Medibutors</td>
+                        <td>Lok Vihar,Pitampura</td>
+                        <td>9868705338</td>
+                    </tr>
+                    <tr>
+                        <td>Singh Enterpries</td>
+                        <td>Rohini</td>
+                        <td>9354732393</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table 2 -->
+            <h2>East Delhi</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Neelkanth</td>
+                        <td>Patparganj</td>
+                        <td>1143057777</td>
+                    </tr>
+                    <tr>
+                        <td>Medilife </td>
+                        <td>Maujpur</td>
+                        <td>9968068611</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table 3 -->
+            <h2>West Delhi</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gupta Agencies</td>
+                        <td>Guru Harkrishan Nagar,Paschim Vihar</td>
+                        <td>9599157989</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table 4 -->
+            <h2>Central Delhi</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Danya Pharma</td>
+                        <td>Rajender Nagar</td>
+                        <td>1149047800</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table 5 -->
+            <h2>South Delhi</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Neelkanth</td>
+                        <td>Okhla</td>
+                        <td>9268035288</td>
+                    </tr>
+                    <tr>
+                        <td>Sunnyco</td>
+                        <td>Lajpat Nagar</td>
+                        <td>1141721909</td>
+                    </tr>
+                    <tr>
+                        <td>Jolly Enterprises</td>
+                        <td>Okhla</td>
+                        <td>1140810572</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table 6 -->
+            <h2>Noida</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Health Medivision</td>
+                        <td>Noida Sector 115</td>
+                        <td>8800293069</td>
+                    </tr>
+                    <tr>
+                        <td>Health Medivision </td>
+                        <td>noida Sector 122</td>
+                        <td>8800293611</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table 7 -->
+            <h2>Ghaziabad</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>R K Health and Surgicals</td>
+                        <td>Chiranjeev Vihar,Kavi Nagar</td>
+                        <td>8882106455</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="belowTable">
+
+        </section>
+
+
+    </main>
+
+    <!------- FOOTER ------------>
+    <footer>
+        <section class="footer grid">
+            <div class="footer-content">
+                <div class="footer-data">
+                    <div id="nav-logo-link" href="#">
+                      <img class="new-logo" id="footer-logo" src="../images/logo/logo.png" alt="logo">
+                      <!-- <h2 class="name-logo">ASARVA Life Science</h2> -->
+                    </div>
+                    <h2>Asarva <strong>Life Sciences</h2>
+                    <p>Copyright ©2024 All Rights Reserved.<br> Design & Developed by <a href=""
+                            id="trishna">Trishna</a></p>
+                </div>
+
+                <!-- <div class="footer-social">
+                    <a href="#"><i class="bi bi-facebook nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-instagram nav-icon"></i></a>
+                    <a href="#"><i class="bi bi-youtube nav-icon"></i></a>
+                </div> -->
+            </div>
+        </section>
+    </footer>
+
+    <!------- SCROLL TOP ------------>
+    <a id="scrollup" class="back-top" href="#home">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="grey" />
+            <path d="M20 27V13" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M13 20L20 13L27 20" stroke="white" stroke-width="4" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+
+    </a>
+    <a id="call-button" href="tel:+1234567890"
+        style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; text-decoration: none;">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="cursor: pointer; transition: transform 0.3s ease;">
+            <circle cx="20" cy="20" r="20" fill="#4caf50" />
+            <!-- Phone icon -->
+            <path
+                d="M15.5 12.5L19.5 16.5C19.7 16.7 19.7 17 19.5 17.2L18 18.8C18 18.9 18 19.1 18.1 19.2C19.3 21 20.8 22.5 22.6 23.7C22.7 23.8 22.9 23.8 23 23.8L24.8 22.3C25 22.1 25.3 22.1 25.5 22.3L29.5 26.3C29.7 26.5 29.7 26.8 29.5 27C28.3 28.2 26.6 28.8 24.8 28.8C22.8 28.8 20.1 27.7 16.9 24.5C13.7 21.3 12.6 18.6 12.6 16.6C12.6 14.8 13.2 13.1 14.4 11.9C14.6 11.7 14.9 11.7 15.1 11.9L15.5 12.5Z"
+                fill="white" />
+        </svg>
+    </a>
+
+    <script>
+        // Blinking effect
+        setInterval(function () {
+            var button = document.querySelector('#call-button svg circle');
+            button.style.opacity = (button.style.opacity == '1' || button.style.opacity === '') ? '0.5' : '1';
+        }, 500);
+
+        // Hover scale effect
+        document.getElementById('call-button').addEventListener('mouseover', function () {
+            this.querySelector('svg').style.transform = 'scale(1.1)';
+        });
+
+        document.getElementById('call-button').addEventListener('mouseout', function () {
+            this.querySelector('svg').style.transform = 'scale(1)';
+        });
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../home/js/main.js"></script>
+</body>
+
+</html>
